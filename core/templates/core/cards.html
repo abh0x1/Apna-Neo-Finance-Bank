@@ -1,0 +1,436 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+    .card-flip-container {
+        perspective: 1000px;
+        height: 200px;
+    }
+
+    .card-flip {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+    }
+
+    .card-flip-container:hover .card-flip {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+    }
+
+    .benefit-item {
+        transition: all 0.3s ease;
+    }
+
+    .benefit-item:hover {
+        transform: translateX(5px);
+        background-color: #f0f9eb;
+    }
+</style>
+
+
+<!-- Big Card Image Banner -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <!-- Google Font for curvy heading -->
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+        <h1 class="text-4xl md:text-5xl mb-6 text-black" style="font-family: 'Pacifico', cursive;">
+            Premium Credit Cards
+        </h1>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-700">
+            Choose from our range of feature-rich credit cards designed for your lifestyle
+        </p>
+        <div class="max-w-4xl mx-auto">
+            <img src="{% static 'images/card/big_card.png' %}" alt="Premium Credit Cards"
+                class="w-full h-auto rounded-xl shadow-lg mx-auto">
+        </div>
+    </div>
+</section>
+
+
+<!-- Cards Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-center mb-12">Our Card Portfolio</h2>
+
+        {% comment %} Loop through 5 cards {% endcomment %}
+        {% for i in "123456" %}
+        <div class="grid md:grid-cols-2 gap-8 mb-16 items-center">
+            <div class="flex justify-center">
+                <div class="card-flip-container w-80 h-52">
+                    <div class="card-flip">
+                        <img src="{% static 'images/card/card-'|add:i|stringformat:'s'|add:'.png' %}"
+                            alt="Card {{i}} Front" class="card-front object-contain">
+                        <img src="{% static 'images/card/card-back-'|add:i|stringformat:'s'|add:'.png' %}"
+                            alt="Card {{i}} Back" class="card-back object-contain">
+                    </div>
+                </div>
+            </div>
+            <div>
+                {% if i == '1' %}
+                <h3 class="text-xl font-bold mb-4">Signature Card</h3>
+                <p class="text-gray-600 mb-6">Our entry-level premium debit card with great benefits for everyday
+                    spending.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-plane"></i></span>
+                        <span>10 complimentary airport lounge accesses per quarter</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-concierge-bell"></i></span>
+                        <span>24/7 dedicated concierge service</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-golf-ball"></i></span>
+                        <span>Complimentary golf games at premium courses</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-film"></i></span>
+                        <span>Buy 1 Get 1 free on movie tickets twice a month</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-percent"></i></span>
+                        <span>2% cashback on all online spends</span>
+                    </li>
+                </ul>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">Annual Fee</p>
+                        <p class="font-semibold">₹999+GST</p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">ATM Limit</p>
+                        <p class="font-semibold">₹1,50,000/day</p>
+                    </div>
+                </div>
+                <button
+                    class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded transition">
+                    Apply Now
+                </button>
+
+                {% elif i == '2' %}
+                <h3 class="text-xl font-bold mb-4">Gold Card</h3>
+                <p class="text-gray-600 mb-6">Perfect for frequent shoppers with enhanced reward points on retail
+                    spending.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-shopping-cart"></i></span>
+                        <span>5X reward points on all retail shopping</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-gift"></i></span>
+                        <span>Annual gift voucher worth ₹2,000</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-coins"></i></span>
+                        <span>1% fuel surcharge waiver</span>
+                    </li>
+                </ul>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">Annual Fee</p>
+                        <p class="font-semibold">₹350+GST</p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">ATM Limit</p>
+                        <p class="font-semibold">₹75,000/day</p>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded transition">
+                    Apply Now
+                </button>
+
+                {% elif i == '3' %}
+                <h3 class="text-xl font-bold mb-4">Silver Card</h3>
+                <p class="text-gray-600 mb-6">Designed for frequent travelers with premium travel benefits.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-plane-departure"></i></span>
+                        <span>4 complimentary airport lounge accesses per quarter</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-hotel"></i></span>
+                        <span>Complimentary hotel stays at premium properties</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-shield-alt"></i></span>
+                        <span>Comprehensive travel insurance up to ₹1 crore</span>
+                    </li>
+                </ul>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">Annual Fee</p>
+                        <p class="font-semibold">₹250+GST</p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">ATM Limit</p>
+                        <p class="font-semibold">₹50,000/day</p>
+                    </div>
+                </div>
+                <button
+                    class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded transition">
+                    Apply Now
+                </button>
+
+                {% elif i == '4' %}
+                <h3 class="text-xl font-bold mb-4">Diamond Card</h3>
+                <p class="text-gray-600 mb-6">Our most premium card with exclusive benefits for elite customers.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-concierge-bell"></i></span>
+                        <span>24/7 dedicated concierge service</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-golf-ball"></i></span>
+                        <span>Complimentary golf games at premium courses</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-gem"></i></span>
+                        <span>Exclusive access to luxury events and experiences</span>
+                    </li>
+                </ul>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">Annual Fee</p>
+                        <p class="font-semibold">₹500+GST</p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">ATM Limit</p>
+                        <p class="font-semibold">₹90,000/day</p>
+                    </div>
+                </div>
+                <button
+                    class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded transition">
+                    Apply Now
+                </button>
+                {% elif i == '5' %}
+                <h3 class="text-xl font-bold mb-4">Classic Card</h3>
+                <p class="text-gray-600 mb-6">Designed for students and individuals with budget-friendly features.</p>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-graduation-cap"></i></span>
+                        <span>Discounts on educational subscriptions and online courses</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-coins"></i></span>
+                        <span>1% cashback on online purchases</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3"><i
+                                class="fas fa-mobile-alt"></i></span>
+                        <span>Contactless payments & mobile wallet integration</span>
+                    </li>
+                </ul>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">Annual Fee</p>
+                        <p class="font-semibold">₹99+GST</p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">ATM Limit</p>
+                        <p class="font-semibold">₹30,000/day</p>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded transition">
+                    Apply Now
+                </button>
+                {% endif %}
+
+
+                {% if i == '6' %}
+                <h3 class="text-xl font-bold mb-4">Black Credit Card</h3>
+                <p class="text-gray-600 mb-6">
+                    The ultimate premium card for elite members, offering unparalleled privileges, exclusive
+                    experiences, and high-end rewards.
+                </p>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3">
+                            <i class="fas fa-plane"></i>
+                        </span>
+                        <span>Unlimited complimentary airport lounge access worldwide</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3">
+                            <i class="fas fa-gem"></i>
+                        </span>
+                        <span>Exclusive VIP access to luxury events and private experiences</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3">
+                            <i class="fas fa-globe-asia"></i>
+                        </span>
+                        <span>Annual international luxury travel package</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3">
+                            <i class="fas fa-hotel"></i>
+                        </span>
+                        <span>Complimentary 5-star hotel stays and premium concierge services</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3">
+                            <i class="fas fa-percentage"></i>
+                        </span>
+                        <span>5% cashback on luxury and lifestyle purchases</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3">
+                            <i class="fas fa-car"></i>
+                        </span>
+                        <span>Airport transfers & luxury chauffeur services</span>
+                    </li>
+                    <li class="benefit-item flex items-start p-2 rounded">
+                        <span class="bg-primary-100 text-primary-600 rounded-full p-2 mr-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </span>
+                        <span>Premium travel insurance up to ₹5 crore</span>
+                    </li>
+                </ul>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">Annual Fee</p>
+                        <p class="font-semibold">₹25,000+GST</p>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="text-sm text-gray-600">ATM Limit</p>
+                        <p class="font-semibold">₹5,00,000/day</p>
+                    </div>
+                </div>
+
+                <button class="bg-primary-600 hover:bg-gray-900 text-white font-semibold py-2 px-6 rounded transition">
+                    Apply Now
+                </button>
+
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Premium Benefits Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-center mb-12">Premium Benefits</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-plane-departure text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold mb-3">Airport Lounge Access</h3>
+                <p class="text-gray-600 text-sm">Complimentary access to 1000+ airport lounges worldwide</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold mb-3">Travel Insurance</h3>
+                <p class="text-gray-600 text-sm">Up to ₹1 crore air accident cover and lost luggage protection</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-concierge-bell text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold mb-3">Concierge Service</h3>
+                <p class="text-gray-600 text-sm">24/7 dedicated concierge for premium support and bookings</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-gift text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold mb-3">Exclusive Rewards</h3>
+                <p class="text-gray-600 text-sm">Luxury gifts, experiences, and offers for elite customers</p>
+            </div>
+
+            <!-- New Benefit: Lucky Draw -->
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-ticket-alt text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold mb-3">Lucky Draw</h3>
+                <p class="text-gray-600 text-sm">Monthly lucky draws with exciting prizes for premium members</p>
+            </div>
+
+            <!-- New Benefit: Free 1-Day Hotel Stay -->
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-hotel text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold mb-3">Free 1-Day Hotel Stay</h3>
+                <p class="text-gray-600 text-sm">Enjoy a complimentary 1-day stay at premium hotels across India</p>
+            </div>
+
+            <!-- New Benefit: International Trip -->
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-globe-asia text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold mb-3">International Trip</h3>
+                <p class="text-gray-600 text-sm">Chance to win an all-expenses-paid international trip every year</p>
+            </div>
+
+            <!-- New Ultra-Premium Benefit: Personal Wealth Advisor -->
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-hand-holding-usd text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold mb-3">Personal Wealth Advisor</h3>
+                <p class="text-gray-600 text-sm">
+                    Complimentary access to a dedicated financial advisor for investment planning and wealth management
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

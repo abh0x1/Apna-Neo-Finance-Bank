@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Image 1: Welcome Section -->
+<section class="relative h-[500px] md:h-[600px] w-screen flex items-center justify-center"
+  style="background-image: url({% static 'images/home/home.jpg' %}); background-size: cover; background-position: center;">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+  <!-- Centered Text -->
+  <div class="relative text-center px-4 max-w-3xl">
+    <h1 class="text-3xl md:text-5xl mb-4 text-white drop-shadow-lg" style="font-family: 'Playfair Display', serif;">
+      Welcome to Apna Neo Finance Bank
+    </h1>
+    <p class="text-1xl md:text-1xl text-white drop-shadow-md mb-6">
+      Experience premium digital banking with cutting-edge services and ultimate security
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="{% url 'accounts:open_account' %}"
+        class="border-2 border-white text-white hover:bg-white hover:bg-opacity-20 px-6 py-3 rounded-xl font-medium transition">
+        Open Account
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Features Section -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold text-center mb-12 text-gray-800">Why Choose Apna Neo Finance Bank?</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="bg-[#0f766e] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-shield-alt text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Bank-Grade Security</h3>
+        <p class="text-gray-600">Your money is protected with advanced encryption and multi-factor authentication.</p>
+      </div>
+      <div class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="bg-[#0f766e] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-bolt text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Instant Transfers</h3>
+        <p class="text-gray-600">Send and receive money 24/7 with real-time transaction processing.</p>
+      </div>
+      <div class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="bg-[#0f766e] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-mobile-alt text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Mobile Banking</h3>
+        <p class="text-gray-600">Full banking services available anytime, anywhere through our mobile app.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold text-center mb-12 text-gray-800">Our Banking Services</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <i class="fas fa-piggy-bank text-3xl text-[#0f766e] mb-3"></i>
+        <h3 class="font-semibold mb-2">Savings Accounts</h3>
+        <p class="text-sm text-gray-600">Grow your money with competitive interest rates</p>
+      </a>
+      <a href="{% url 'core:cards' %}" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <i class="fas fa-credit-card text-3xl text-[#0f766e] mb-3"></i>
+        <h3 class="font-semibold mb-2">Credit Cards</h3>
+        <p class="text-sm text-gray-600">Flexible payment options with great rewards</p>
+      </a>
+      <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <i class="fas fa-home text-3xl text-[#0f766e] mb-3"></i>
+        <h3 class="font-semibold mb-2">Home Loans</h3>
+        <p class="text-sm text-gray-600">Affordable financing for your dream home</p>
+      </a>
+      <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <i class="fas fa-chart-line text-3xl text-[#0f766e] mb-3"></i>
+        <h3 class="font-semibold mb-2">Investments</h3>
+        <p class="text-sm text-gray-600">Grow your wealth with expert guidance</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Offers Bank Accounts Section -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold text-center mb-12 text-gray-800">We Offer Bank Accounts</h2>
+    <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- KNIGHT Account -->
+      <div class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="bg-green-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-chess-knight text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">KNIGHT Account</h3>
+        <p class="text-gray-600">Ideal for teenagers starting their financial journey. Learn to save and manage money
+          responsibly.</p>
+      </div>
+
+      <!-- QUEEN Account -->
+      <div class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="bg-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-chess-queen text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">QUEEN Account</h3>
+        <p class="text-gray-600">Designed for women who want financial independence and easy access to premium banking
+          services.</p>
+      </div>
+
+      <!-- KING Account -->
+      <div class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="bg-black w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-chess-king text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">KING Account</h3>
+        <p class="text-gray-600">Perfect for adults looking for high-value banking features and wealth growth
+          opportunities.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

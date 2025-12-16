@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Kumar | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a2f0a 0%, #000000 100%);
+            color: #e5e5e5;
+            min-height: 100vh;
+        }
+
+        .cursive-font {
+            font-family: 'Courgette', cursive;
+        }
+
+        .card {
+            background: rgba(20, 30, 20, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(46, 125, 50, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border: 1px solid rgba(46, 125, 50, 0.6);
+        }
+
+        .green-accent {
+            color: #4ade80;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #4ade80;
+        }
+
+        .chess-icon {
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="container mx-auto px-4 py-8 text-center">
+        <!-- Crown Icon -->
+        <div class="flex justify-center mb-4">
+            <span class="material-symbols-outlined text-green-400 text-6xl">crown</span>
+        </div>
+
+        <h1 class="text-4xl font-bold mb-2">Abhishek</h1>
+        <p class="text-xl text-gray-300">Red Teamer | Python Developer | Learning Finance</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Single-column layout on all screens -->
+        <div class="flex flex-col gap-6 max-w-4xl mx-auto">
+
+            <!-- About Card -->
+            <div class="card rounded-xl p-5">
+                <h2 class="text-2xl font-bold mb-4 section-title flex items-center">
+                    <span class="material-icons text-green-400 mr-2">person</span>
+                    About Me
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="material-icons text-green-400 mr-3 mt-1">person</span>
+                        <p class="text-gray-300">24-year-old aspiring professional with a strong foundation in
+                            Cybersecurity domain.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="material-icons text-green-400 mr-3 mt-1">school</span>
+                        <p class="text-gray-300">Currently completing BCA while working on Django projects.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="material-icons text-green-400 mr-3 mt-1">business</span>
+                        <p class="text-gray-300">Practical knowledge of Red Teaming , Cyber Crime and Python Backend
+                            Development.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills Card -->
+            <div class="card rounded-xl p-5">
+                <h2 class="text-2xl font-bold mb-4 section-title flex items-center">
+                    <span class="material-icons text-green-400 mr-2">diamond</span>
+                    Technical Skills
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center">
+                        <span class="material-icons text-green-400 mr-2">security</span>
+                        <span>Cyber Security and Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey Card -->
+            <div class="card rounded-xl p-5">
+                <h2 class="text-2xl font-bold mb-4 section-title cursive-font flex items-center">
+                    <svg class="w-6 h-6 text-green-400 mr-2 chess-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9.5 13H7v-2h2.5V9.5h2V11H15v2h-2.5v1.5h-2V13z" />
+                    </svg>
+                    My Journey
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-r from-green-700 to-green-900 flex items-center justify-center text-white mr-4">
+                            <span class="material-icons">school</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-200">BCA Education</h4>
+                            <p class="text-gray-400">Pursuing Bachelor of Computer Applications</p>
+                            <p class="text-gray-500 text-sm">Current</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-r from-green-700 to-green-900 flex items-center justify-center text-white mr-4">
+                            <span class="material-icons">code</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-200">Technical Skill Development</h4>
+                            <p class="text-gray-400">Mastering Python, Django, Flask, and Cyber Security</p>
+                            <p class="text-gray-500 text-sm">Ongoing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Vision Card -->
+            <div class="card rounded-xl p-5">
+                <h2 class="text-2xl font-bold mb-4 section-title flex items-center">
+                    <span class="material-icons text-green-400 mr-2">visibility</span>
+                    Future Vision
+                </h2>
+                <p class="text-gray-300 mb-6 cursive-font text-lg">"Combining technical skills with practical finance
+                    and entrepreneurship goals, envisioning a future of independent work, freelancing, and business
+                    growth."</p>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="bg-gradient-to-br from-green-900 to-black p-4 rounded-lg border border-green-800">
+                        <div class="flex items-center mb-3">
+                            <span class="material-icons text-green-400 mr-2">work</span>
+                            <h4 class="font-semibold text-gray-200">Corporate Experience</h4>
+                        </div>
+                        <p class="text-gray-400 text-sm">Gain corporate experience to build skills and professional
+                            network.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-900 to-black p-4 rounded-lg border border-green-800">
+                        <div class="flex items-center mb-3">
+                            <span class="material-icons text-green-400 mr-2">business</span>
+                            <h4 class="font-semibold text-gray-200">Village Entrepreneurship</h4>
+                        </div>
+                        <p class="text-gray-400 text-sm">Start a local business in my village while maintaining
+                            corporate ties.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="container mx-auto px-4 py-8 text-center">
+            <a href="{% url 'core:home' %}"
+                class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-colors">
+                ← Back to Home
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-green-900 mt-12 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">Abhishek &copy; 2025 | Connecting Technology with Finance</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.linkedin.com/in/abh0x1kr/"
+                    class="text-gray-400 hover:text-green-400 transition-colors">
+                    <span class="material-icons">link</span>
+                </a>
+                <a href="https://github.com/abh0x1" class="text-gray-400 hover:text-green-400 transition-colors">
+                    <span class="material-icons">code</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

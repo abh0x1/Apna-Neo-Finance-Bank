@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Only one container with gradient background -->
+<div class="bg-gradient-to-br from-green-900 via-black to-gray-900 min-h-screen p-4 py-8">
+    <!-- Single content card with glassmorphism effect -->
+    <div
+        class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl w-full max-w-4xl mx-auto p-8 text-white border border-green-800/30">
+        <!-- Title -->
+        <h2 class="text-3xl font-bold text-center mb-2">ANFB Secure Banking</h2>
+        <p class="text-center text-green-200 mb-6">Create your new account</p>
+
+        <!-- Messages -->
+        {% if messages %}
+        <div class="mb-6">
+            {% for message in messages %}
+            <div class="p-3 rounded-lg text-sm mb-2 
+          {% if message.tags == 'error' %}
+            bg-red-500/20 text-red-200 border border-red-500/40
+          {% else %}
+            bg-green-500/20 text-green-200 border border-green-500/40
+          {% endif %}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Open Account Form -->
+        <form method="post" enctype="multipart/form-data" class="space-y-6">
+            {% csrf_token %}
+
+            <!-- Personal Information Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-green-300 border-b border-green-700/40 pb-2">
+                        Personal Information
+                    </h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Username*</label>
+                            {{ form.username }}
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block mb-1 text-sm font-medium">First Name*</label>
+                                {{ form.first_name }}
+                            </div>
+                            <div>
+                                <label class="block mb-1 text-sm font-medium">Last Name*</label>
+                                {{ form.last_name }}
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Email Address*</label>
+                            {{ form.email }}
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Date of Birth*</label>
+                            {{ form.dob }}
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-green-300 border-b border-green-700/40 pb-2">
+                        Contact Details
+                    </h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Mobile Number*</label>
+                            {{ form.mobile }}
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">City*</label>
+                            {{ form.city }}
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Marital Status*</label>
+                            {{ form.marital_status }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full width fields for Address -->
+            <div class="mt-6">
+                <h3 class="text-lg font-semibold mb-4 text-green-300 border-b border-green-700/40 pb-2">
+                    Address Information
+                </h3>
+                <div>
+                    <label class="block mb-1 text-sm font-medium">Address*</label>
+                    {{ form.address }}
+                </div>
+            </div>
+
+            <!-- Account Information Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-green-300 border-b border-green-700/40 pb-2">
+                        Account Information
+                    </h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Occupation*</label>
+                            {{ form.occupation }}
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Account Plan*</label>
+                            {{ form.account_plan }}
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Account Type*</label>
+                            {{ form.account_type }}
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Residency Status*</label>
+                            {{ form.residency_status }}
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-green-300 border-b border-green-700/40 pb-2">
+                        Security
+                    </h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Password*</label>
+                            {{ form.password1 }}
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">Confirm Password*</label>
+                            {{ form.password2 }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full width fields for KYC and Profile Image -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-green-300 border-b border-green-700/40 pb-2">
+                        KYC Document
+                    </h3>
+                    <div>
+                        <label class="block mb-1 text-sm font-medium">KYC Document*</label>
+                        <div
+                            class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-green-800/40 border-dashed rounded-lg bg-black/20">
+                            <div class="space-y-1 text-center">
+                                <div class="flex text-sm text-gray-400">
+                                    <label
+                                        class="relative cursor-pointer rounded-md font-medium text-green-400 hover:text-green-300">
+                                        <span>Upload a file</span>
+                                        {{ form.kyc_doc }}
+                                    </label>
+                                </div>
+                                <p class="text-xs text-gray-400">PNG, JPG, PDF up to 10MB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-green-300 border-b border-green-700/40 pb-2">
+                        Profile Image
+                    </h3>
+                    <div>
+                        <label class="block mb-1 text-sm font-medium">Profile Image</label>
+                        <div
+                            class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-green-800/40 border-dashed rounded-lg bg-black/20">
+                            <div class="space-y-1 text-center">
+                                <div class="flex text-sm text-gray-400">
+                                    <label
+                                        class="relative cursor-pointer rounded-md font-medium text-green-400 hover:text-green-300">
+                                        <span>Upload a photo</span>
+                                        {{ form.profile_image }}
+                                    </label>
+                                </div>
+                                <p class="text-xs text-gray-400">PNG, JPG up to 5MB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit"
+                class="w-full py-3 mt-6 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg transition transform hover:-translate-y-0.5">
+                Open Account
+            </button>
+        </form>
+
+        <!-- Footer Links -->
+        <p class="text-center text-sm text-green-200 mt-6">
+            Already have an account?
+            <a href="{% url 'accounts:login' %}" class="text-green-400 hover:underline">Login here</a>
+        </p>
+    </div>
+</div>
+
+<style>
+    /* Custom styling for form fields to match the theme */
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        color: white;
+        transition: all 0.3s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: rgba(34, 197, 94, 0.8);
+        box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Style for file inputs */
+    input[type="file"] {
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+
+    input[type="file"]::file-selector-button {
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        background-color: rgba(34, 197, 94, 0.2);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    input[type="file"]::file-selector-button:hover {
+        background-color: rgba(34, 197, 94, 0.3);
+    }
+
+    /* Error styling for form fields */
+    .errorlist {
+        color: #f87171;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Help text styling */
+    .helptext {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+        display: block;
+    }
+</style>
+{% endblock %}

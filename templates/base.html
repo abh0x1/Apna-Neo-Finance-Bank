@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apna Neo Finance Bank - Premium Digital Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: "#e8f5e9",
+                            100: "#c8e6c9",
+                            200: "#a5d6a7",
+                            300: "#81c784",
+                            400: "#66bb6a",
+                            500: "#4caf50",  // Primary green
+                            600: "#388e3c",  // Darker green
+                            700: "#1b5e20",  // Premium dark green
+                            800: "#0d4213",  // Very dark green
+                            900: "#052909",  // Near black green
+                        },
+                        dark: {
+                            100: "#1a1a1a",
+                            200: "#141414",
+                            300: "#0f0f0f",
+                        },
+                        accent: {
+                            500: "#ffd700",  // Gold accent for premium feel
+                            600: "#d4af37",
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-50 font-sans -screen flex flex-col">
+    <!-- Header -->
+    <header
+        class="w-full bg-gradient-to-r from-gray-900 to-gray-800 shadow-lg px-6 py-4 flex items-center justify-between">
+        <!-- Bank logo and name -->
+        <div class="flex items-center space-x-4">
+            <div class="bg-gradient-to-br from-emerald-600 to-emerald-800 p-2 rounded-xl shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-white">Apna Neo Finance Bank</h1>
+                <p class="text-xs text-emerald-300">सबका अपना बैंक</p>
+            </div>
+        </div>
+
+        <!-- Login button -->
+        <a href="{% url 'accounts:login' %}"
+            class="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-5 py-2.5 rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all flex items-center space-x-2 shadow-md hover:shadow-lg">
+            <i class="fas fa-user-circle"></i>
+            <span>Login</span>
+        </a>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="w-full bg-gradient-to-r from-emerald-800 to-emerald-900 text-white shadow-md">
+        <div class="w-full px-4 md:px-8">
+            <ul class="flex flex-wrap justify-center">
+                <li class="mx-1 py-2">
+                    <a href="/"
+                        class="flex items-center space-x-2 text-white hover:text-emerald-200 px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="mx-1 py-2">
+                    <a href="{% url 'accounts:login' %}"
+                        class="flex items-center space-x-2 text-white hover:text-emerald-200 px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Netbanking</span>
+                    </a>
+                </li>
+                <li class="mx-1 py-2">
+                    <a href="{% url 'core:cards' %}"
+                        class="flex items-center space-x-2 text-white hover:text-emerald-200 px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Cards</span>
+                    </a>
+                </li>
+                <li class="mx-1 py-2">
+                    <a href="{% url 'core:investments' %}"
+                        class="flex items-center space-x-2 text-white hover:text-emerald-200 px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li class="mx-1 py-2">
+                    <a href="{% url 'core:loans' %}"
+                        class="flex items-center space-x-2 text-white hover:text-emerald-200 px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Loans</span>
+                    </a>
+                </li>
+                <li class="mx-1 py-2">
+                    <a href="{% url 'core:support' %}"
+                        class="flex items-center space-x-2 text-white hover:text-emerald-200 px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all">
+                        <i class="fas fa-headset"></i>
+                        <span>Support</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+    <main class="flex-1 w-full ">
+        {% block content %}
+        <!-- Example Premium Card (remove or replace in child templates) -->
+
+        {% endblock %}
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-10 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Bank Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-br from-emerald-600 to-emerald-800 p-2 rounded-xl shadow-lg mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Apna Neo Finance Bank</h2>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                        Your trusted banking partner for all financial needs. Experience premium banking services with
+                        cutting-edge technology and personalized support.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="{% url 'core:coming_soon'%}"
+                            class="text-gray-400 hover:text-emerald-400 transition-colors">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="{% url 'core:coming_soon'%}"
+                            class="text-gray-400 hover:text-emerald-400 transition-colors">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="{% url 'core:coming_soon'%}"
+                            class="text-gray-400 hover:text-emerald-400 transition-colors">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="{% url 'core:coming_soon'%}"
+                            class="text-gray-400 hover:text-emerald-400 transition-colors">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                        <a href="{% url 'core:coming_soon'%}"
+                            class="text-gray-400 hover:text-emerald-400 transition-colors">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-emerald-400">Quick Links</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="{% url 'core:about'%}"
+                                class="hover:text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>About Us</a></li>
+                        <li><a href="{% url 'core:coming_soon'%}"
+                                class="hover:text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>Careers</a></li>
+                        <li><a href="{% url 'core:coming_soon'%}"
+                                class="hover:text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>Rates & Charges</a>
+                        </li>
+                        <li><a href="{% url 'core:coming_soon'%}"
+                                class="hover:text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>FAQs</a></li>
+                        <li><a href="{% url 'banking:branch_finder' %}"
+                                class="hover:text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>Branch Locator</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-emerald-400">Services</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>Savings Account</a>
+                        </li>
+                        <li><a href="{% url 'core:investments' %}"
+                                class=" relative z-10 text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>Fixed Deposits</a>
+                        </li>
+                        <li><a href="{% url 'core:loans' %}"
+                                class="relative z-10 text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>Loans</a></li>
+                        <li><a href="{% url 'core:loans' %}"
+                                class=" relative z-10 :text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>Insurance</a></li>
+                        <li><a href="{% url 'core:investments' %}"
+                                class=" relative z-10 :text-white transition-colors flex items-center"><i
+                                    class="fas fa-chevron-right text-xs mr-2 text-emerald-500"></i>Investment Plans</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Contact -->
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4 text-emerald-400">Stay Updated</h3>
+                    <p class="text-gray-300 text-sm mb-4">Subscribe to our newsletter for the latest updates and offers.
+                    </p>
+
+                    <div class="mb-6">
+                        <form class="flex flex-col space-y-3">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-2.5 bg-gray-700 border border-emerald-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+                            <button type="submit"
+                                class="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium py-2.5 px-4 rounded-lg transition-all shadow-md hover:shadow-lg">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+
+                    <h3 class="text-lg font-semibold mb-3 text-emerald-400">Contact Us</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-phone-alt text-emerald-400 mt-1"></i>
+                            <span>1800-123-NEOB</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-emerald-400 mt-1"></i>
+                            <span>support@apnaneobank.com</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-emerald-400 mt-1"></i>
+                            <span>Find a Branch/ATM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom section -->
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; 2025 Apna Neo Finance Bank. All rights reserved ~
+                    Abhishek Kr Verma 'AsurA'
+                </p>
+                <div class="flex flex-wrap gap-4 md:gap-6 text-sm text-gray-400">
+                    <a href="{% url 'core:coming_soon'%}" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="{% url 'core:coming_soon'%}" class="hover:text-white transition-colors">Terms of
+                        Service</a>
+                    <a href="{% url 'core:coming_soon'%}" class="hover:text-white transition-colors">Security</a>
+                    <a href="{% url 'core:coming_soon'%}" class="hover:text-white transition-colors">Grievance
+                        Redressal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

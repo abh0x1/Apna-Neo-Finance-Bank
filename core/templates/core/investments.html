@@ -1,0 +1,699 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative h-[400px] w-full bg-cover bg-center overflow-hidden"
+    style="background-image: url('{% static 'images/investments/crypto.jpg' %}'); margin:0; padding:0;">
+
+    <!-- Dark overlay for opacity effect -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Text content -->
+    <div class="relative z-10 flex items-center justify-center h-full px-4">
+        <div class="text-center text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.8)] max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Investment Solutions</h1>
+            <p class="text-xl md:text-2xl">Grow your wealth with our diverse investment options</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Investment Navigation -->
+<section class="py-8 bg-gray-100 sticky top-0 z-10 shadow-sm">
+    <div class="container mx-auto px-4">
+        <div class="flex overflow-x-auto space-x-4 py-2 justify-center min-w-full">
+            <a href="#fixed-deposits"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">
+                Fixed Deposits
+            </a>
+            <a href="#mutual-funds"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">
+                Mutual Funds
+            </a>
+            <a href="#real-estate"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">
+                Retirement Plans
+            </a>
+            <a href="#recurring-deposits"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">
+                Recurring Deposits
+            </a>
+            <a href="#stocks"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">
+                Stocks & ETFs
+            </a>
+            <a href="#crypto"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">
+                Digital Assets
+            </a>
+            <a href="#retirement"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">
+                Retirement Plans
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Fixed Deposits Section -->
+<section id="fixed-deposits" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/investments/fd.jpg' %}" alt="Fixed Deposits" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Fixed Deposits</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">7.75%</span>
+                        <span class="text-sm text-gray-600">Annual Interest Rate</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Tenure</p>
+                            <p class="font-semibold">7 days - 10 years</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Minimum Amount</p>
+                            <p class="font-semibold">₹5,000</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Secure your savings with our high-interest Fixed Deposits. Enjoy
+                    guaranteed returns with flexible tenure options and hassle-free renewal process.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Higher
+                        interest rates than savings account</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Loan against
+                        FD available</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Auto-renewal
+                        facility</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i>
+                        Monthly/quarterly interest payout options</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Invest Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mutual Funds Section -->
+<section id="mutual-funds" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/investments/mf.jpg' %}" alt="Mutual Funds" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Mutual Funds</h2>
+                <p class="text-gray-600 mb-6">Diversify your portfolio with our curated selection of mutual funds. From
+                    equity to debt funds, we have options for every risk appetite.</p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-[#daf0d0] w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-line text-[#0f766e]"></i>
+                            </div>
+                            <h3 class="font-semibold">Equity Funds</h3>
+                        </div>
+                        <p class="text-sm text-gray-600">Potential for higher returns with market-linked investments</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-[#daf0d0] w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-shield-alt text-[#0f766e]"></i>
+                            </div>
+                            <h3 class="font-semibold">Debt Funds</h3>
+                        </div>
+                        <p class="text-sm text-gray-600">Stable returns with lower risk compared to equity funds</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-[#daf0d0] w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-balance-scale text-[#0f766e]"></i>
+                            </div>
+                            <h3 class="font-semibold">Hybrid Funds</h3>
+                        </div>
+                        <p class="text-sm text-gray-600">Balance of equity and debt for moderate risk investors</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-[#daf0d0] w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-globe text-[#0f766e]"></i>
+                            </div>
+                            <h3 class="font-semibold">International Funds</h3>
+                        </div>
+                        <p class="text-sm text-gray-600">Diversify globally with international market exposure</p>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Explore Funds
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recurring Deposits Section -->
+<section id="recurring-deposits" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/investments/rd.jpg' %}" alt="Recurring Deposits"
+                    class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Recurring Deposits</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">7.25%</span>
+                        <span class="text-sm text-gray-600">Annual Interest Rate</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Minimum Monthly</p>
+                            <p class="font-semibold">₹1,000</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Tenure</p>
+                            <p class="font-semibold">6 months - 10 years</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Build savings discipline with our Recurring Deposit scheme. Save a fixed
+                    amount monthly and earn higher interest than regular savings accounts.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Flexible
+                        deposit amounts</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Auto-debit
+                        facility available</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Premature
+                        withdrawal options</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Nomination
+                        facility</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Start RD
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Family Section -->
+<section id="family" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/investments/family.jpg' %}" alt="Family Investments"
+                    class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Family Investments</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">8.15%</span>
+                        <span class="text-sm text-gray-600">Average Annual Returns</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Minimum Investment</p>
+                            <p class="font-semibold">₹10,000</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Tenure</p>
+                            <p class="font-semibold">5-25 years</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Secure your family's future with our specially curated family investment
+                    plans. These plans help you build wealth for your children's education, marriage, and other
+                    important milestones.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Education
+                        planning for children</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Marriage and
+                        future expense coverage</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Life insurance
+                        protection included</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Tax benefits
+                        under Section 80C</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Explore Family Plans
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Old Age Section -->
+<section id="old" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/investments/old.jpg' %}" alt="Senior Citizen Investments"
+                    class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Senior Citizen Plans</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">8.75%</span>
+                        <span class="text-sm text-gray-600">Special Interest Rate</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Age Eligibility</p>
+                            <p class="font-semibold">60+ years</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Minimum Investment</p>
+                            <p class="font-semibold">₹25,000</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Our specialized investment plans for senior citizens offer higher returns
+                    with regular income options. Enjoy your retirement years with financial security and peace of mind.
+                </p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Higher
+                        interest rates for senior citizens</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i>
+                        Monthly/quarterly interest payout options</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Medical
+                        emergency coverage benefits</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Easy
+                        withdrawal facilities</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    View Senior Plans
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Real Estate Investment Section -->
+<section id="real-estate" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-gray-800">Real Estate Investments</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Build wealth through property investments with our curated real
+                estate opportunities</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-stretch gap-8 mb-12">
+            <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl">
+                <div class="mb-6 relative">
+                    <img src="{% static 'images/investments/realstate.jpg' %}" alt="Real Estate Investment"
+                        class="rounded-lg shadow-md w-full h-64 object-cover">
+                    <div
+                        class="absolute top-4 left-4 bg-[#0f766e] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        ₹25L - ₹2.5Cr
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Residential Properties</h3>
+                <p class="text-gray-600 mb-6">Invest in carefully selected residential properties across major cities
+                    with potential for capital appreciation and rental income.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Expected Returns</p>
+                        <p class="font-semibold text-[#0f766e]">8-12%</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Investment Horizon</p>
+                        <p class="font-semibold">3-7 years</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Rental Yield</p>
+                        <p class="font-semibold">3-5%</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Locations</p>
+                        <p class="font-semibold">6+ Cities</p>
+                    </div>
+                </div>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Property
+                        management services included</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Legal due
+                        diligence completed</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Regular
+                        performance reports</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Exit
+                        assistance available</li>
+                </ul>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition w-full">
+                    Explore Properties
+                </button>
+            </div>
+
+            <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl">
+                <div class="mb-6 relative">
+                    <img src="{% static 'images/investments/Stock.jpg' %}" alt="REITs Investment"
+                        class="rounded-lg shadow-md w-full h-64 object-cover">
+                    <div
+                        class="absolute top-4 left-4 bg-[#0f766e] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        ₹10,000 Minimum
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">REITs & Real Estate Funds</h3>
+                <p class="text-gray-600 mb-6">Invest in Real Estate Investment Trusts (REITs) and real estate mutual
+                    funds for diversified exposure without direct property ownership.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Dividend Yield</p>
+                        <p class="font-semibold text-[#0f766e]">5-8%</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Liquidity</p>
+                        <p class="font-semibold">High</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Minimum Investment</p>
+                        <p class="font-semibold">₹10,000</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Diversification</p>
+                        <p class="font-semibold">Multiple Assets</p>
+                    </div>
+                </div>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Professional
+                        management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Regular
+                        dividend income</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Stock exchange
+                        listed</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Lower entry
+                        barrier</li>
+                </ul>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition w-full">
+                    View REIT Options
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-[#f0f9eb] p-8 rounded-xl">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Why Invest in Real Estate with Us?</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search-dollar text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Curated Opportunities</h4>
+                    <p class="text-sm text-gray-600">We select only properties with strong growth potential and thorough
+                        due diligence</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hand-holding-usd text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Financing Options</h4>
+                    <p class="text-sm text-gray-600">Get preferential home loan rates and flexible payment plans</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Wealth Building</h4>
+                    <p class="text-sm text-gray-600">Benefit from both capital appreciation and regular rental income
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stocks & ETFs Section -->
+<section id="stocks" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-gray-800">Stocks & ETFs</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Trade in equities, derivatives, and ETFs with our advanced
+                trading platform and research tools.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-chart-bar text-2xl text-[#0f766e]"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-center">Equity Trading</h3>
+                <p class="text-gray-600 text-center">Buy and sell stocks with real-time market data and advanced
+                    charting tools.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-project-diagram text-2xl text-[#0f766e]"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-center">Derivatives</h3>
+                <p class="text-gray-600 text-center">Trade in futures and options with competitive brokerage rates.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-boxes text-2xl text-[#0f766e]"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-center">ETFs</h3>
+                <p class="text-gray-600 text-center">Diversify with Exchange Traded Funds across various sectors and
+                    themes.</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-md">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Why Trade With Us?</h3>
+            <div class="grid md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-[#0f766e]">0.05%</div>
+                    <p class="text-sm text-gray-600">Equity Brokerage</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-[#0f766e]">₹0</div>
+                    <p class="text-sm text-gray-600">Account Maintenance</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-[#0f766e]">24/7</div>
+                    <p class="text-sm text-gray-600">Support</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-[#0f766e]">1000+</div>
+                    <p class="text-sm text-gray-600">Research Reports</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Crypto/Digital Assets Section -->
+<section id="crypto" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-gray-800">Digital Assets</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Explore the future of investing with our secure digital assets
+                platform.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-stretch gap-8">
+            <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl">
+                <h3 class="text-2xl font-semibold mb-6">Cryptocurrencies</h3>
+                <p class="text-gray-600 mb-6">Buy, sell and store popular cryptocurrencies with bank-level security and
+                    insurance protection.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                        <i class="fab fa-bitcoin text-orange-500 text-2xl mr-3"></i>
+                        <span>Bitcoin</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                        <i class="fab fa-ethereum text-purple-500 text-2xl mr-3"></i>
+                        <span>Ethereum</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                        <i class="fas fa-coins text-yellow-500 text-2xl mr-3"></i>
+                        <span>BNB</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                        <i class="fas fa-dollar-sign text-green-500 text-2xl mr-3"></i>
+                        <span>USDT</span>
+                    </div>
+                </div>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> 98% cold
+                        storage security</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Insurance
+                        protection</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Real-time
+                        market data</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Recurring buy
+                        options</li>
+                </ul>
+            </div>
+
+            <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl">
+                <h3 class="text-2xl font-semibold mb-6">NFT Marketplace</h3>
+                <p class="text-gray-600 mb-6">Discover, collect, and trade digital art and unique NFTs on our curated
+                    marketplace.</p>
+
+                <div class="mb-6 p-4 bg-white rounded-lg shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold">Featured Collection</span>
+                        <span class="text-sm text-[#0f766e]"><a href="#">View All</a></span>
+                    </div>
+                    <div class="flex space-x-4 overflow-x-auto py-2 justify-center">
+                        <div class="flex-shrink-0 w-20 h-20 bg-purple-200 rounded-lg"></div>
+                        <div class="flex-shrink-0 w-20 h-20 bg-blue-200 rounded-lg"></div>
+                        <div class="flex-shrink-0 w-20 h-20 bg-green-200 rounded-lg"></div>
+                        <div class="flex-shrink-0 w-20 h-20 bg-yellow-200 rounded-lg"></div>
+                        <div class="flex-shrink-0 w-20 h-20 bg-red-200 rounded-lg"></div>
+                    </div>
+                </div>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Curated
+                        collections</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Secure
+                        transactions</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Creator
+                        royalties</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Low
+                        transaction fees</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Retirement Plans Section -->
+<section id="retirement" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-gray-800">Retirement Plans</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Plan for a secure future with our retirement investment options.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-6">
+                    <div class="bg-[#daf0d0] w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-piggy-bank text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">National Pension System (NPS)</h3>
+                </div>
+                <p class="text-gray-600 mb-6">A voluntary, long-term retirement savings scheme designed to enable
+                    systematic savings during your working life.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <p class="text-sm text-gray-600">Returns</p>
+                        <p class="font-semibold">9-12%</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Tax Benefits</p>
+                        <p class="font-semibold">Up to ₹2 Lakhs</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Withdrawal</p>
+                        <p class="font-semibold">60 years</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Min Contribution</p>
+                        <p class="font-semibold">₹500/yr</p>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Learn More
+                </button>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-6">
+                    <div class="bg-[#daf0d0] w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-check text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Annuity Plans</h3>
+                </div>
+                <p class="text-gray-600 mb-6">Guaranteed income for life with our annuity plans that provide regular
+                    payments after retirement.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <p class="text-sm text-gray-600">Payout Options</p>
+                        <p class="font-semibold">Monthly/Quarterly/Yearly</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Guarantee Period</p>
+                        <p class="font-semibold">5-20 years</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Return of Premium</p>
+                        <p class="font-semibold">Available</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Min Investment</p>
+                        <p class="font-semibold">₹1,00,000</p>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-16 bg-[#0f766e]">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-white">Ready to Start Investing?</h2>
+        <p class="text-xl text-white mb-10 max-w-2xl mx-auto">Open an investment account today and get access to all our
+            wealth management products</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button
+                class="bg-white text-[#0f766e] hover:bg-gray-100 px-8 py-3 rounded-lg font-medium shadow-md transition">
+                Open Investment Account
+            </button>
+            <button
+                class="border-2 border-white text-white hover:bg-white hover:bg-opacity-20 px-8 py-3 rounded-lg font-medium transition">
+                Speak to an Advisor
+            </button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

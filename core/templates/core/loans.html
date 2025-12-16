@@ -1,0 +1,657 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!-- Hero Section -->
+<section class="relative h-[400px] w-full bg-cover bg-center overflow-hidden"
+    style="background-image: url('{% static 'images/loans/hero.jpg' %}'); margin:0; padding:0;">
+
+    <!-- Dark overlay for opacity effect -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Text content -->
+    <div class="relative z-10 flex items-center justify-center h-full px-4">
+        <div class="text-center text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.8)] max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Loan Solutions</h1>
+            <p class="text-xl md:text-2xl">Flexible financing options for all your needs</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Loan Navigation -->
+<section class="py-8 bg-gray-100 sticky top-0 z-10 shadow-sm">
+    <div class="container mx-auto px-4">
+        <div class="flex overflow-x-auto space-x-4 py-2 justify-center">
+            <a href="#personal-loans"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">Personal
+                Loans</a>
+            <a href="#home-loans"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">Home
+                Loans</a>
+            <a href="#business-loans"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">Business
+                Loans</a>
+            <a href="#government-loans"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">Government
+                Loans</a>
+            <a href="#education-loans"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">Education
+                Loans</a>
+            <a href="#vehicle-loans"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">Vehicle
+                Loans</a>
+            <a href="#loan-against-property"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">Loan
+                Against Property</a>
+            <a href="#insurance"
+                class="whitespace-nowrap px-4 py-2 bg-white rounded-lg font-medium text-[#0f766e] shadow-sm hover:shadow-md transition">Insurance
+                Plans</a>
+        </div>
+    </div>
+</section>
+
+<!-- Personal Loans Section -->
+<section id="personal-loans" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/loans/personal.jpg' %}" alt="Personal Loans" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Personal Loans</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">10.5%</span>
+                        <span class="text-sm text-gray-600">Interest Rate (p.a.)</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Loan Amount</p>
+                            <p class="font-semibold">Up to ₹25 Lakhs</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Tenure</p>
+                            <p class="font-semibold">1-5 years</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Meet your personal financial needs with our quick and hassle-free personal
+                    loans. No collateral required with minimal documentation.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Instant
+                        approval</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Flexible
+                        repayment options</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> No security
+                        required</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Funds
+                        disbursed within 24 hours</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Home Loans Section -->
+<section id="home-loans" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/loans/home.jpg' %}" alt="Home Loans" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Home Loans</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">8.4%</span>
+                        <span class="text-sm text-gray-600">Interest Rate (p.a.)</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Loan Amount</p>
+                            <p class="font-semibold">Up to ₹5 Crores</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Tenure</p>
+                            <p class="font-semibold">Up to 30 years</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Turn your dream of owning a home into reality with our attractive home
+                    loan options. Get competitive interest rates and flexible repayment terms.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> High
+                        loan-to-value ratio</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Top-up loan
+                        facility</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Balance
+                        transfer options</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Pre-approved
+                        offers</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Loans Section -->
+<section id="business-loans" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/loans/business.jpg' %}" alt="Business Loans" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Business Loans</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">11.5%</span>
+                        <span class="text-sm text-gray-600">Interest Rate (p.a.)</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Loan Amount</p>
+                            <p class="font-semibold">Up to ₹2 Crores</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Tenure</p>
+                            <p class="font-semibold">1-7 years</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Fuel your business growth with our customized business loans. Whether you
+                    need working capital or expansion funds, we have the right solution.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Quick
+                        disbursal</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Minimal
+                        documentation</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Flexible
+                        repayment</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> No collateral
+                        for smaller amounts</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Government Loans Section -->
+<section id="government-loans" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-gray-800">Government Loans</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Avail benefits of various government-backed loan schemes for
+                businesses and individuals</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-stretch gap-8 mb-12">
+            <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-md">
+                <div class="mb-6 relative">
+                    <img src="{% static 'images/loans/udyam.jpg' %}" alt="Udyam Loan"
+                        class="rounded-lg shadow-md w-full h-64 object-cover">
+                    <div
+                        class="absolute top-4 left-4 bg-[#0f766e] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Govt. Backed
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Udyam Registration Loans</h3>
+                <p class="text-gray-600 mb-6">Special loans for MSMEs registered under Udyam with attractive interest
+                    rates and collateral-free options.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Interest Rate</p>
+                        <p class="font-semibold text-[#0f766e]">8.5% onwards</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Loan Amount</p>
+                        <p class="font-semibold">Up to ₹5 Crores</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Collateral</p>
+                        <p class="font-semibold">Not required up to ₹50L</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Processing Fee</p>
+                        <p class="font-semibold">0.5%</p>
+                    </div>
+                </div>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Interest
+                        subsidy available</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Credit
+                        guarantee cover</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Quick approval
+                        process</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Moratorium
+                        period available</li>
+                </ul>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition w-full">
+                    Apply for Udyam Loan
+                </button>
+            </div>
+
+            <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-md">
+                <div class="mb-6 relative">
+                    <img src="{% static 'images/loans/msme.jpg' %}" alt="MSME Loan"
+                        class="rounded-lg shadow-md w-full h-64 object-cover">
+                    <div
+                        class="absolute top-4 left-4 bg-[#0f766e] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Priority Lending
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">MSME Business Loans</h3>
+                <p class="text-gray-600 mb-6">Comprehensive financing solutions for Micro, Small and Medium Enterprises
+                    under various government schemes.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Interest Rate</p>
+                        <p class="font-semibold text-[#0f766e]">9.0% onwards</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Loan Amount</p>
+                        <p class="font-semibold">Up to ₹10 Crores</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Tenure</p>
+                        <p class="font-semibold">Up to 10 years</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Security</p>
+                        <p class="font-semibold">Hypothecation</p>
+                    </div>
+                </div>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> CGTMSE
+                        coverage available</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Working
+                        capital support</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Equipment
+                        financing</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Project report
+                        assistance</li>
+                </ul>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition w-full">
+                    Apply for MSME Loan
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-[#f0f9eb] p-8 rounded-xl">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Benefits of Government Loans</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-percentage text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Subsidized Interest</h4>
+                    <p class="text-sm text-gray-600">Enjoy lower interest rates with government subsidies on eligible
+                        loans</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Credit Guarantee</h4>
+                    <p class="text-sm text-gray-600">Get collateral-free loans with credit guarantee cover from CGTMSE
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-file-invoice-dollar text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Easy Processing</h4>
+                    <p class="text-sm text-gray-600">Simplified documentation and faster processing for government
+                        schemes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Loans Section -->
+<section id="education-loans" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/loans/education.jpg' %}" alt="Education Loans" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Education Loans</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">8.9%</span>
+                        <span class="text-sm text-gray-600">Interest Rate (p.a.)</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Loan Amount</p>
+                            <p class="font-semibold">Up to ₹1.5 Crores</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Moratorium</p>
+                            <p class="font-semibold">Course period + 1 year</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Invest in your future with our education loans that cover tuition fees,
+                    accommodation, and other educational expenses in India and abroad.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Covers
+                        domestic and international education</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Repayment
+                        starts after course completion</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Tax benefits
+                        under Section 80E</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> No collateral
+                        for loans up to ₹40 Lakhs</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Vehicle Loans Section -->
+<section id="vehicle-loans" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/loans/vehicle.jpg' %}" alt="Vehicle Loans" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Vehicle Loans</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">7.8%</span>
+                        <span class="text-sm text-gray-600">Interest Rate (p.a.)</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Loan Amount</p>
+                            <p class="font-semibold">Up to ₹50 Lakhs</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Tenure</p>
+                            <p class="font-semibold">Up to 7 years</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Drive home your dream car or commercial vehicle with our attractive
+                    vehicle financing options. Quick processing and minimal documentation.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> 100% on-road
+                        funding</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Flexible
+                        repayment options</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Insurance
+                        assistance</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Pre-approved
+                        offers</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Loan Against Property Section -->
+<section id="loan-against-property" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="{% static 'images/loans/property.jpg' %}" alt="Loan Against Property"
+                    class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Loan Against Property</h2>
+                <div class="bg-[#f0f9eb] p-6 rounded-xl mb-6">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-[#0f766e]">9.5%</span>
+                        <span class="text-sm text-gray-600">Interest Rate (p.a.)</span>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Loan Amount</p>
+                            <p class="font-semibold">Up to ₹10 Crores</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Tenure</p>
+                            <p class="font-semibold">Up to 15 years</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Unlock the value of your property without selling it. Get high-value loans
+                    at attractive interest rates against residential or commercial properties.</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> High
+                        loan-to-value ratio</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Multipurpose
+                        usage</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Balance
+                        transfer facility</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Top-up options
+                        available</li>
+                </ul>
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Insurance Section -->
+<section id="insurance" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-gray-800">Insurance Solutions</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Protect what matters most with our comprehensive insurance
+                options</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-stretch gap-8 mb-12">
+            <!-- Health Insurance -->
+            <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-md">
+                <div class="mb-6 relative">
+                    <img src="{% static 'images/insurance/health.jpg' %}" alt="Health Insurance"
+                        class="rounded-lg shadow-md w-full h-64 object-cover">
+                    <div
+                        class="absolute top-4 left-4 bg-[#0f766e] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Health Insurance</h3>
+                <p class="text-gray-600 mb-6">Comprehensive health coverage for you and your family with cashless
+                    treatment at 10,000+ hospitals across India.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Coverage</p>
+                        <p class="font-semibold text-[#0f766e]">Up to ₹2 Crores</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Network Hospitals</p>
+                        <p class="font-semibold">10,000+</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Cashless Claims</p>
+                        <p class="font-semibold">Yes</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg shadow-sm">
+                        <p class="text-sm text-gray-600">Tax Benefits</p>
+                        <p class="font-semibold">80D</p>
+                    </div>
+                </div>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Pre and post
+                        hospitalization cover</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Day care
+                        procedures covered</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> No claim bonus
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Free health
+                        check-ups</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> 24/7 customer
+                        support
+
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Premium
+                        discounts available
+                    </li>
+
+                </ul>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition w-full">
+                    Get Health Insurance
+                </button>
+            </div>
+
+            <!-- Other Insurance Types -->
+            <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-md">
+                <div class="mb-6 relative">
+                    <img src="{% static 'images/insurance/comprehensive.jpg' %}" alt="Comprehensive Insurance"
+                        class="rounded-lg shadow-md w-full h-64 object-cover">
+                    <div
+                        class="absolute top-4 left-4 bg-[#0f766e] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Multiple Options
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Other Insurance Plans</h3>
+                <p class="text-gray-600 mb-6">Protect your assets and secure your future with our range of insurance
+                    products.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm flex flex-col items-center text-center">
+                        <i class="fas fa-car text-2xl text-[#0f766e] mb-2"></i>
+                        <span class="font-semibold">Motor Insurance</span>
+                        <p class="text-xs text-gray-600 mt-1">Comprehensive & third party</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm flex flex-col items-center text-center">
+                        <i class="fas fa-home text-2xl text-[#0f766e] mb-2"></i>
+                        <span class="font-semibold">Home Insurance</span>
+                        <p class="text-xs text-gray-600 mt-1">Property & content protection</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm flex flex-col items-center text-center">
+                        <i class="fas fa-plane text-2xl text-[#0f766e] mb-2"></i>
+                        <span class="font-semibold">Travel Insurance</span>
+                        <p class="text-xs text-gray-600 mt-1">Domestic & international</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm flex flex-col items-center text-center">
+                        <i class="fas fa-user-tie text-2xl text-[#0f766e] mb-2"></i>
+                        <span class="font-semibold">Life Insurance</span>
+                        <p class="text-xs text-gray-600 mt-1">Term & investment plans</p>
+                    </div>
+                </div>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Instant policy
+                        issuance</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Easy claim
+                        process</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> 24/7 customer
+                        support</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#0f766e] mr-2"></i> Premium
+                        discounts available</li>
+                </ul>
+
+                <button
+                    class="bg-[#0f766e] hover:bg-[#115e59] text-white px-6 py-3 rounded-lg font-medium shadow-md transition w-full">
+                    Explore All Insurance
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-[#f0f9eb] p-8 rounded-xl">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Why Choose Our Insurance Plans?</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-money-bill-wave text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Affordable Premiums</h4>
+                    <p class="text-sm text-gray-600">Competitive pricing with maximum coverage benefits</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Quick Claims</h4>
+                    <p class="text-sm text-gray-600">Fast and hassle-free claim settlement process</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">24/7 Support</h4>
+                    <p class="text-sm text-gray-600">Round-the-clock assistance for all your insurance needs</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-[#daf0d0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-[#0f766e]"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Comprehensive Coverage</h4>
+                    <p class="text-sm text-gray-600">Wide range of policies to protect all aspects of your life</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-16 bg-[#0f766e]">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-white">Need Help Choosing the Right Loan?</h2>
+        <p class="text-xl text-white mb-10 max-w-2xl mx-auto">Our financial experts will help you find the perfect loan
+            solution for your needs</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button
+                class="bg-white text-[#0f766e] hover:bg-gray-100 px-8 py-3 rounded-lg font-medium shadow-md transition">
+                Apply for Loan
+            </button>
+            <button
+                class="border-2 border-white text-white hover:bg-white hover:bg-opacity-20 px-8 py-3 rounded-lg font-medium transition">
+                Speak to an Advisor
+            </button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

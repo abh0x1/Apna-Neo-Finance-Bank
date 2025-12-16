@@ -1,0 +1,13 @@
+{% extends "banking/netbanking_base.html" %}
+{% block content %}
+<div class="min-h-screen flex items-center justify-center text-green-700">
+    <div class="text-center">
+        <h1 class="text-5xl font-bold mb-4">🚧 Coming Soon!</h1>
+        <p class="text-lg text-gray-500">This feature is not yet available. Stay tuned!</p>
+        <a href="{% url 'banking:dashboard' %}"
+            class="mt-6 text-white inline-block bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-semibold">Back
+            to
+            Home</a>
+    </div>
+</div>
+{% endblock %}
